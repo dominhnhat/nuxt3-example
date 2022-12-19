@@ -1,0 +1,7 @@
+query CountInforReview($type: String!, $projectId: String!) {
+    reviewsWithPagination(
+      where: { galleries: { some: { contentType: { startsWith: $type } } }, projectId: { eq: $projectId } }
+    ) {
+      totalCount
+    }
+  }

@@ -1,0 +1,26 @@
+query GetRecommendedPosts($filter: PostCollectionFilterInput!) {
+    postsWithPagination(take: 10, where: $filter, order: { lastUpdatedAt: DESC }) {
+      items {
+        demand
+        id
+        price
+        totalBedRoom
+        totalWC
+        acreage
+        gallery
+        pageInfor {
+          title
+          slug
+        }
+        project {
+          id
+          address {
+            street
+            district
+            city
+          }
+        }
+        lastUpdatedAt
+      }
+    }
+  }

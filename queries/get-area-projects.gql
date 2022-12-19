@@ -1,0 +1,16 @@
+query GetAreaProjects($condition: ProjectCollectionFilterInput) {
+    projects(where: $condition) {
+      id
+      images
+      acreage
+      price
+      projectName
+      address {
+        district
+        city
+      }
+      pageInfors {
+        slug
+      }
+    }
+  }

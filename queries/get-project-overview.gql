@@ -1,0 +1,47 @@
+query GetProjectOverview($slug: String!) {
+        projects(
+          where: {
+            pageInfors: {
+              some: { slug: { and: [{ ncontains: "ban-can-ho" }, { ncontains: "cho-thue-can-ho" }, { eq: $slug }] } }
+            }
+          }
+        ) {
+          id
+          projectName
+          address {
+            street
+            district
+            city
+            googleMapLocation
+          }
+          images
+          pageInfors {
+            title
+            slug
+            metaDescription
+          }
+          price
+          acreage
+          numberOfApartments
+          numberOfBuildings
+          juridical
+          investor {
+            investorName
+            image
+            numberOfProjects
+            foundedTime
+            phoneNumber
+          }
+          projectPost
+          masterPlan
+          utilities {
+            locationUtilities
+            internalUtilities
+            listOfUtilities
+          }
+          tempProjectInfors {
+            inforName
+            inforContent
+          }
+        }
+      }
