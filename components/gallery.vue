@@ -13,11 +13,11 @@
               class="glide__slide media_container"
               v-on:click="openGallery(index)"
             >
-              <div
+              <!-- <div
                 :style="`background-image: url(${
                   item.includes('.mp4') ? imgUrl : item
                 }); filter: blur(100px); -webkit-filter: blur(100px);height: 400px;`"
-              ></div>
+              ></div> -->
               <video v-if="item.includes('mp4')" controls :src="item" preload="none" loading="lazy" />
               <nuxt-img v-else format="webp" :src="item" :alt="`${alt} hình ${index}}`" loading="lazy" />
             </li>

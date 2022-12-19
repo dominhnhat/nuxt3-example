@@ -45,3 +45,22 @@ query GetProjectOverview($slug: String!) {
           }
         }
       }
+
+query GetBlogs($projectId: String) {
+          blogsWithPagination(take: 5, order: { createdAt: DESC }, where: { project: { id: { eq: $projectId } } }) {
+            totalCount
+            items {
+              content
+              id
+              thumbnail
+              author {
+                name
+              }
+              pageInfor {
+                title
+                slug
+              }
+              createdAt
+            }
+          }
+        }

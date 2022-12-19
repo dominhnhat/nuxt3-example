@@ -181,7 +181,7 @@
             Mặt bằng dự án
           </h2>
           <div class="max-w-[900px]" v-if="project.designDrawings != null && project.designDrawings.length > 0">
-            <gallery
+            <Gallery
               class="w-full"
               :items="project.designDrawings.map(c => c.drawingPath)"
               :itemsWithCaption="
@@ -269,44 +269,6 @@
                   Nghe cư dân đánh giá và nhận xét về chung cư
                   {{ project.projectName }}
                 </h3>
-                <!-- <div class="flex md:mb-[30px] mb-[10px]">
-                  <div class="flex mr-[10px]">
-                    <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M6.3291 7H6.3391H6.3291ZM10.3291 7H10.3391H10.3291ZM14.3291 7H14.3391H14.3291ZM7.3291 13H3.3291C2.79867 13 2.28996 12.7893 1.91489 12.4142C1.53982 12.0391 1.3291 11.5304 1.3291 11V3C1.3291 2.46957 1.53982 1.96086 1.91489 1.58579C2.28996 1.21071 2.79867 1 3.3291 1H17.3291C17.8595 1 18.3682 1.21071 18.7433 1.58579C19.1184 1.96086 19.3291 2.46957 19.3291 3V11C19.3291 11.5304 19.1184 12.0391 18.7433 12.4142C18.3682 12.7893 17.8595 13 17.3291 13H12.3291L7.3291 18V13Z"
-                        stroke="#737373"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <p class="text-xs ml-[3px]">
-                      {{ reviewInforCount.commentCount }}
-                    </p>
-                  </div>
-                  <div class="flex mr-[10px]">
-                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M4 12H16L12.25 7L9.25 11L7 8L4 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.979333 0.196 1.45 0 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.8043 0.979333 20 1.45 20 2V14C20 14.55 19.8043 15.021 19.413 15.413C19.021 15.8043 18.55 16 18 16H2ZM18 14V2H2V14H18Z"
-                        fill="#737373"
-                      />
-                    </svg>
-                    <p class="text-xs ml-[3px]">
-                      {{ reviewInforCount.imageCount }}
-                    </p>
-                  </div>
-                  <div class="flex">
-                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.6416 4.9575V12.0425C7.6416 12.4488 8.08685 12.6974 8.43298 12.4861L13.7289 9.24913C13.8573 9.17078 13.9634 9.06073 14.0371 8.92955C14.1107 8.79836 14.1494 8.65044 14.1494 8.5C14.1494 8.34956 14.1107 8.20164 14.0371 8.07045C13.9634 7.93927 13.8573 7.82922 13.7289 7.75087L8.43135 4.5155C8.35256 4.46769 8.26248 4.44168 8.17033 4.44013C8.07819 4.43859 7.98728 4.46156 7.90693 4.50669C7.82658 4.55183 7.75967 4.61751 7.71305 4.69701C7.66642 4.7765 7.64177 4.86696 7.6416 4.95913V4.9575ZM4.3916 0.375C3.31416 0.375 2.28085 0.803012 1.51898 1.56488C0.757114 2.32675 0.329102 3.36006 0.329102 4.4375V12.5625C0.329102 13.6399 0.757114 14.6733 1.51898 15.4351C2.28085 16.197 3.31416 16.625 4.3916 16.625H15.7666C16.844 16.625 17.8774 16.197 18.6392 15.4351C19.4011 14.6733 19.8291 13.6399 19.8291 12.5625V4.4375C19.8291 3.36006 19.4011 2.32675 18.6392 1.56488C17.8774 0.803012 16.844 0.375 15.7666 0.375H4.3916ZM1.9541 4.4375C1.9541 3.79103 2.21091 3.17105 2.66803 2.71393C3.12515 2.25681 3.74514 2 4.3916 2H15.7666C16.4131 2 17.0331 2.25681 17.4902 2.71393C17.9473 3.17105 18.2041 3.79103 18.2041 4.4375V12.5625C18.2041 13.209 17.9473 13.829 17.4902 14.2861C17.0331 14.7432 16.4131 15 15.7666 15H4.3916C3.74514 15 3.12515 14.7432 2.66803 14.2861C2.21091 13.829 1.9541 13.209 1.9541 12.5625V4.4375Z"
-                        fill="#737373"
-                      />
-                    </svg>
-                    <p class="text-xs ml-[3px]">
-                      {{ reviewInforCount.videoCount }}
-                    </p>
-                  </div>
-                </div> -->
                 <p class="ml-auto text-base text-orange-700 flex items-center text-sm">
                   Xem review
                   <svg
@@ -337,21 +299,21 @@
             </nuxt-link>
           </div>
         </div>
-        <!-- <featured-blogs
-          :blogs="FeaturedBlogs"
+        <featured-blogs
+          :blogs="featuredBlogs"
           class="flex-shrink-[99] text-[#374151] h-fit md:mt-[91px] mt-[30px] top-[91px] sticky lg:block"
-        /> -->
+        />
       </div>
       <div class="divide-y w-full border-b-2 mt-8 mb-12 hidden sm:block" />
       <!-- <div ref="SellAndRent" style="scroll-margin-top: 54px">
         <recommended-posts
-          v-if="recommendedPosts !== undefined && recommendedPosts.length > 0 && !$apollo.loading"
+          v-if="recommendedPosts !== undefined && recommendedPosts.length > 0"
           title="Bán và Thuê"
           class="mb-4 recommend-posts"
           :posts="recommendedPosts"
         />
-      </div>
-      <near-area-recommended
+      </div> -->
+      <!-- <near-area-recommended
         v-if="areaProjects !== undefined && areaProjects.length > 0 && !$apollo.loading"
         class="mb-4"
         :projects="areaProjects"
@@ -377,6 +339,22 @@
       return projectsData.value.projects[0] ?? undefined
     })
 
+    const {data: featuredBlogsData} = await useAsyncGql({
+      operation: 'GetBlogs',
+      variables:{
+        projectId: project?.value.id,
+      }
+    })
+    const featuredBlogs = computed(() =>{
+      return featuredBlogsData.value.blogsWithPagination.items.map(b => ({
+          id: b.id,
+          thumbnail: b.thumbnail,
+          authorName: b.author.name,
+          title: b.pageInfor.title,
+          createdAt: this.formatDate(new Date(b.createdAt)),
+          slug: b.pageInfor.slug,
+        }));
+    })
     const readMoreContent = ref('Xem thêm');
     const showReadMoreStyles = ref('mt-1.5 text-lg overflow-hidden max-h-80')
     const tableContentStyles = ref('text-center sm:mr-6 table-of-content color-A3A3A3 transition-02s-all')
