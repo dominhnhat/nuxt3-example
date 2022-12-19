@@ -210,13 +210,13 @@
           >
             Vị trí dự án {{ project.projectName }}
           </h2>
-          <iframe
+          <!-- <iframe
             :src="project.address.googleMapLocation"
             style="border: 0"
             class="h-52 sm:h-64 w-full"
             allowfullscreen=""
             loading="lazy"
-          />
+          /> -->
           <div class="text-[#374151]">
             <h3 class="mt-[30px] mb-[10px] text-2xl font-bold md:hidden font-source-serif-pro">Đánh giá và nhận xét</h3>
             <h3 class="mt-[30px] mb-[10px] text-2xl font-bold hidden md:block font-source-serif-pro">
