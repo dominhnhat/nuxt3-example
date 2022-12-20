@@ -351,7 +351,7 @@
           thumbnail: b.thumbnail,
           authorName: b.author.name,
           title: b.pageInfor.title,
-          createdAt: this.formatDate(new Date(b.createdAt)),
+          createdAt: formatDate(new Date(b.createdAt)),
           slug: b.pageInfor.slug,
         }));
     })
