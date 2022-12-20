@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            GQL_HOST: 'http://maico.vn:3101/graphql/',
+            GQL_HOST: 'https://api-listing-staging.maico.vn/graphql/',
         },
     },
     postcss: {
