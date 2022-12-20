@@ -3,6 +3,7 @@ import type ImageOptions from '@nuxt/image-edge'
 export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
+        preset: 'netlify-edge'
     },
     css: ['~/assets/css/tailwind.css'],
     modules: [
